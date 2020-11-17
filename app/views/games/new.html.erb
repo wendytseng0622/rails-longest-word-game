@@ -1,0 +1,14 @@
+<h1> new game </h1>
+
+<% @new.each do |letter| %>
+<%= letter %>
+<% end %>
+
+
+<h1> what is the longest number you can find? </h1>
+
+<form action="/score" method="POST">
+  <input type="text" name="word">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<input type="submit">
+</form>
